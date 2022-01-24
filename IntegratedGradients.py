@@ -22,6 +22,7 @@ class integrated_gradients:
         # backend: either tensorflow or theano)
         self.backend = K.backend()
 
+        #DEPRECATED
         #load model supports keras.Model and keras.Sequential
         if isinstance(model, Sequential):
             self.model = model.model
