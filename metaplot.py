@@ -3,6 +3,10 @@ import pandas as pd
 
 import IntegratedGradients as ig
 
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+
 #ob = [('candy', 10, 300), ('apple', 20, 100), ('horse', 30, 200)]
 #print(sorted(ob, key= lambda x:x[1], reverse = False))
 # sorted function takes the second object in each element of the list to sort from
@@ -26,15 +30,34 @@ def one_hot_encode(df, col='utr', seq_len=50):
 
 
 
-#class Metaplot:
+class Metaplot:
 
-    #def __init__(self, row, col):
-    #    self.np.zeros((row, col))
-    #    self.compute_meta()
+    '''
+    Computes a metaplot across attribution maps for given examples sequences from input data.
+
+    Input: numpy array with attribution maps to compute metaplots for.
+
+    Params:
+    - dim: tuple supplying dimensions of input attribution maps
+    - ex_seq: numpy array storing attribution values of sequences to relate
+
+    Output: numpy array of metaplot visualized as heatmap.
+    '''
+
+    def __init__(self, dim: tuple, ex_seq):
+        
+        self.compute_meta(dim, ex_seq)
+        self.visualize()
 
 
-    #def compute_meta(self, ind, seq, quant = 8):
-    #    ind = [i for i in pred[:,0] if pred >= quant]
+    def compute_meta(dim = (50,4), ex_seq):
+
+        
+
+
+    def visualize():
+
+
 
 
 
