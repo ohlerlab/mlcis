@@ -38,42 +38,40 @@ class Metaplot:
     Input: numpy array with attribution maps to compute metaplots for.
 
     Params:
-    - dim: tuple supplying dimensions of input attribution maps
     - ex_seq: numpy array storing attribution values of sequences to relate
+    - matrix: computed matrix for metaplot
 
     Output: numpy array of metaplot visualized as heatmap.
     '''
 
-    def __init__(self, dim: tuple, ex_seq):
+    def __init__(self, ex_seq):
         
-        self.compute_meta(dim, ex_seq)
-        self.visualize()
+        self.visualize(self.compute_meta(ex_seq))
+
+    def compute_meta(self, ex_seq):
+
+        dim = ex_seq.shape[1:]
+        meta = np.zeros(dim)
+        for i in ex_seq:
+            meta = np.add(meta,i)
+        meta = np.transpose(meta)
+        return meta
+
+    def visualize(self, matrix):
+
+        ax = plt.subplots(figsize = (10,5))
+        ax = sns.heatmap(data = matrix, linewidths=.1, cmap = 'coolwarm', yticklabels = False, xticklabels = 10, cbar = False, square = True)
+        plt.show(ax)
 
 
-    def compute_meta(dim = (50,4), ex_seq):
-
-        
-
-
-    def visualize():
 
 
 
 
+#data = pd.read_csv("/Users/frederickkorbel/Documents/projects/paper/data/MRL_pred.csv", nrows = 1000)
 
-
-data = pd.read_csv("/Users/frederickkorbel/Documents/projects/paper/data/MRL_pred.csv", nrows = 1000)
-
-seq = one_hot_encode(data)
+#seq = one_hot_encode(data)
 
 #ind = [i[0] for i in data if data['rl'][i] > 7]
 
 #att = np.array([ig.explain(seq[i] for i in ind)])
-att = np.random.normal(loc=10, size =(4, 50))
-
-meta = np.zeros((4,50))
-
-for i in att[i]:
-    meta = np.add(att, meta)
-
-print(meta)
