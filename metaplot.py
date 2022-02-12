@@ -67,7 +67,6 @@ class Metaplot:
 
 
 
-
 #data = pd.read_csv("/Users/frederickkorbel/Documents/projects/paper/data/MRL_pred.csv", nrows = 1000)
 
 #seq = one_hot_encode(data)
