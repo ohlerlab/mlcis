@@ -97,7 +97,7 @@ def integrated_gradients(model, input_matrix, baseline=False, steps=50):
     #integral approximation
     grads = (dF_dx[:-1] + dF_dx[1:]) / tf.constant(2.0)
     integrated_grads = tf.math.reduce_mean(grads, axis=0)
-    assert input_matrix.shape == integrated_grads.shape
+    assert input_matrix.squeeze().shape == integrated_grads.shape
 
     #scale integrated gradients with respect to input
     integrated_gradients = (input_matrix - baseline) * integrated_grads
