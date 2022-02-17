@@ -8,27 +8,12 @@ import random
 
 import numpy as np
 import pandas as pd
-import h5py
 
 np.random.seed(1337)
 
 import tensorflow as tf
 import keras
-from keras.preprocessing import sequence
-from keras.optimizers import Adam, RMSprop
-from keras.models import Sequential
-from keras.layers.core import Dense, Dropout, Activation, Flatten
-from keras.layers.convolutional import Conv1D
-from keras.layers import MaxPool1D
-from keras.layers.recurrent import LSTM, GRU
-from keras.layers import Bidirectional
-from keras.utils import plot_model
-from keras import backend as K
-from keras.models import load_model
 
-from keras.layers import Input, Dense, Conv1D, GlobalMaxPooling1D, GlobalAveragePooling1D, Dropout, Concatenate, Lambda, Flatten, ZeroPadding1D, MaxPooling1D, BatchNormalization, ThresholdedReLU, Masking, Add, LSTM, SpatialDropout1D
-from keras.models import Model
-from keras.layers import Layer
 
 import scipy.io
 import sklearn
