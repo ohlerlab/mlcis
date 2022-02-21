@@ -42,9 +42,9 @@ class Metaplot:
     Output: numpy array of metaplot visualized as heatmap.
     '''
 
-    def __init__(self, ex_seq):
+    def __init__(self, ex_seq, colorbar):
         
-        self.visualize(self.compute_meta(ex_seq))
+        self.visualize(self.compute_meta(ex_seq), colorbar)
 
     def compute_meta(self, ex_seq):
 
@@ -55,16 +55,16 @@ class Metaplot:
         meta = np.transpose(meta)
         return meta
 
-xlabel_list =   [1, None, None, None, None, None, None, None, None, 10,
-                None, None, None, None, None, None, None, None, None, 20,
-                None, None, None, None, None, None, None, None, None, 30,
-                None, None, None, None, None, None, None, None, None, 40,
-                None, None, None, None, None, None, None, None, None, 50]
+    def visualize(self, matrix, colorbar = False):
 
-    def visualize(self, matrix):
+        xlabel_list =   [1, None, None, None, None, None, None, None, None, 10,
+                    None, None, None, None, None, None, None, None, None, 20,
+                    None, None, None, None, None, None, None, None, None, 30,
+                    None, None, None, None, None, None, None, None, None, 40,
+                    None, None, None, None, None, None, None, None, None, 50]
 
         ax = plt.subplots(figsize = (20,10))
-        ax = sns.heatmap(data = matrix, linewidths=.1, cmap = 'coolwarm', yticklabels = ['A', 'C', 'G', 'T'], xticklabels = xlabel_list, cbar = False, square = True)
+        ax = sns.heatmap(data = matrix, linewidths=.1, cmap = 'coolwarm', yticklabels = ['A', 'C', 'G', 'T'], xticklabels = xlabel_list, cbar = colorbar, square = True)
         plt.show(ax)
 
 
