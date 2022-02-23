@@ -27,6 +27,14 @@ def one_hot_encode(df, col='utr', seq_len=50):
     return vectors
 
 
+def meta_untransposed(ex_seq):
+
+        dim = ex_seq.shape[1:]
+        meta = np.zeros(dim)
+        for i in ex_seq:
+            meta = np.add(meta,i)
+        return meta
+
 
 class Metaplot:
 
@@ -67,14 +75,3 @@ class Metaplot:
         ax = sns.heatmap(data = matrix, linewidths=.1, cmap = 'coolwarm', yticklabels = ['A', 'C', 'G', 'T'], xticklabels = xlabel_list, cbar = colorbar, square = True)
         plt.show(ax)
 
-
-
-
-
-#data = pd.read_csv("/Users/frederickkorbel/Documents/projects/paper/data/MRL_pred.csv", nrows = 1000)
-
-#seq = one_hot_encode(data)
-
-#ind = [i[0] for i in data if data['rl'][i] > 7]
-
-#att = np.array([ig.explain(seq[i] for i in ind)])
