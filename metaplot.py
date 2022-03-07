@@ -72,6 +72,6 @@ class Metaplot:
                     None, None, None, None, None, None, None, None, None, 50]
 
         ax = plt.subplots(figsize = (20,10))
-        ax = sns.heatmap(data = matrix, linewidths=.1, cmap = 'coolwarm', yticklabels = ['A', 'C', 'G', 'T'], xticklabels = xlabel_list, cbar = colorbar, square = True)
+        ax = sns.heatmap(data = matrix, linewidths=.1, cmap = 'coolwarm', center = 0, yticklabels = ['A', 'C', 'G', 'T'], xticklabels = xlabel_list, cbar = colorbar, square = True)
         plt.show(ax)
 
