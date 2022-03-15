@@ -14,8 +14,6 @@ import seaborn as sns
 #c = np.add(a,b)
 
 
-
-
 def one_hot_encode(df, col='utr', seq_len=50):
     nuc_d = {'a':[1,0,0,0],'c':[0,1,0,0],'g':[0,0,1,0],'t':[0,0,0,1], 'n':[0,0,0,0]}
     vectors=np.empty([len(df),seq_len,4])
