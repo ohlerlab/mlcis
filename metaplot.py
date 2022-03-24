@@ -4,6 +4,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
+from sklearn.preprocessing import MinMaxScaler
 
 #ob = [('candy', 10, 300), ('apple', 20, 100), ('horse', 30, 200)]
 #print(sorted(ob, key= lambda x:x[1], reverse = False))
@@ -54,11 +55,16 @@ class Metaplot:
 
     def compute_meta(self, ex_seq):
 
+        counter = 0
         dim = ex_seq.shape[1:]
         meta = np.zeros(dim)
+
         for i in ex_seq:
             meta = np.add(meta,i)
-        meta = np.transpose(meta)
+            counter += 1
+
+        meta = np.transpose((meta/counter))
+
         return meta
 
     def visualize(self, matrix, colorbar = False):
@@ -70,6 +76,5 @@ class Metaplot:
                     None, None, None, None, None, None, None, None, None, 50]
 
         ax = plt.subplots(figsize = (20,10))
-        ax = sns.heatmap(data = matrix, linewidths=.1, cmap = 'coolwarm', center = 0, yticklabels = ['A', 'C', 'G', 'T'], xticklabels = xlabel_list, cbar = colorbar, square = True)
+        ax = sns.heatmap(data = matrix, linewidths=.1, cmap = 'coolwarm', center = 0, yticklabels = ['A', 'C', 'G', 'T'], xticklabels = xlabel_list, cbar = colorbar, cbar_kws = {'shrink': .13, 'pad':0.02}, square = True)
         plt.show(ax)
-
