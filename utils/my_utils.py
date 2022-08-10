@@ -304,7 +304,7 @@ def barplot_mrl(data):
         elif (data['orf_number'][x] == 0) & (data['aug_number'][x] == 1) & (data['aug_inframe'][x] == 1):
             dfx['feature'][x] = 'NTEx'
             dfy['feature'][x] = 'NTEx'
-        elif (data['aug_number'][x] == 0):
+        elif (data['aug_number'][x] == 0) & (data['utr'][x].startswith('TG') == False):
             dfx['feature'][x] = 'None'
             dfy['feature'][x] = 'None'
         
