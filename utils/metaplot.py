@@ -69,12 +69,14 @@ class Metaplot:
 
     def visualize(self, matrix, colorbar = False):
 
-        xlabel_list =   [-50, None, None, None, None, None, None, None, None, -40,
-                    None, None, None, None, None, None, None, None, None, -30,
-                    None, None, None, None, None, None, None, None, None, -20,
-                    None, None, None, None, None, None, None, None, None, -10,
-                    None, None, None, None, None, None, None, None, None, -1]
+        xlabel_list =   [-50, None, None, None, None, None, None, None, None, None, -40,
+                        None, None, None, None, None, None, None, None, None, -30,
+                        None, None, None, None, None, None, None, None, None, -20,
+                        None, None, None, None, None, None, None, None, None, -10,
+                        None, None, None, None, None, None, None, None, -1]
 
         ax = plt.subplots(figsize = (20,10))
-        ax = sns.heatmap(data = matrix, linewidths=.1, cmap = 'coolwarm', center = 0, yticklabels = ['A', 'C', 'G', 'U'], xticklabels = xlabel_list, cbar = colorbar, cbar_kws = {'shrink': .13, 'pad':0.02}, square = True)
+        ax = sns.heatmap(data = matrix, linewidths=.1, cmap = 'coolwarm', center = 0, yticklabels = ['A', 'C', 'G', 'U'], 
+                        xticklabels = xlabel_list, cbar = colorbar, cbar_kws = {'shrink': .13, 'pad':0.02}, square = True)
+        plt.xlabel('Nucleotide Distance to TIS', fontsize=15)              
         plt.show(ax)
