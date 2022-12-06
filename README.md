@@ -1,7 +1,5 @@
 # mlcis
 
-Machine Learning Interpretation for Identification of Cis-Regulatory Elements from a Deep Learning Model of Translation Regulation.
+Investigating Translation Regulation at the 5'UTR with Machine Learning Interpretation
 
-A Deep Learning Model trained on 5'UTR Reporter Sequence from a Massively Parallel Reporter Assay (Sample et. al 2019) will be used for identification of 5'UTR sequence elements that determine ribosome load, and hence, translation outcome. For this purpose, we applied Integrated Gradients (Sundararajan et. al 2017), a gradient-based attribution method that assesses the importance of individual features for prediction outcome.
-
-Preprocessing of all raw data was conducted in 'data' and training, validation and prediction of and with models in 'models'. To recapitulate the model interpretation process, each figure in the manuscript corresponds to one script in the directory. Each jupyter notebook incorporates the code to generate a figure from preprocessed data. Data preprocessing and model training/validation occurs in seperate dedicated jupyter notebooks. 
+A recent convolutional neural network (CNN) model accurately quantifies the relationship between 5' untranslated region (5'UTR) sequence and translation phenotype, but the underlying biological determinants remain elusive. Applying model interpretation, we extract representations of regulatory logic, revealing a complex interplay of regulatory sequence elements. Guided by insights from model interpretation, we train a model with superior performance on human reporter data, which will promote applications in synthetic biology and precision medicine.
