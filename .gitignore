@@ -22,5 +22,5 @@ __pycache__/
 
 ## Project-Specific ##
 ######################
-model_utils.py/
+model_utils.py*
 simulate_GC.ipynb
