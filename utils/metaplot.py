@@ -6,13 +6,6 @@ import seaborn as sns
 
 from sklearn.preprocessing import MinMaxScaler
 
-#ob = [('candy', 10, 300), ('apple', 20, 100), ('horse', 30, 200)]
-#print(sorted(ob, key= lambda x:x[1], reverse = False))
-# sorted function takes the second object in each element of the list to sort from
-
-#a = np.zeros((2,4))
-#b = np.arange(8).reshape((2,4))
-#c = np.add(a,b)
 
 
 def one_hot_encode(df, col='utr', seq_len=50):
