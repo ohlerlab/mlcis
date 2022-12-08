@@ -194,4 +194,5 @@ dependencies:
     - tqdm==4.62.3
     - typing-extensions==4.3.0
     - varname==0.8.2
+    - statannotations==0.5.0
 prefix: /Users/frederickkorbel/anaconda3/envs/mlcis
