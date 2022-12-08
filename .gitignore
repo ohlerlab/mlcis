@@ -23,4 +23,5 @@ __pycache__/
 ## Project-Specific ##
 ######################
 model_utils.py*
-simulate_GC.ipynb
+simulate_GC.ipynb*
+test.ipynb*

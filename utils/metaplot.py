@@ -7,7 +7,8 @@ import seaborn as sns
 from sklearn.preprocessing import MinMaxScaler
 
 
-
+##this function is adopted from Sample et al. (2019)##
+######################################################
 def one_hot_encode(df, col='utr', seq_len=50):
     nuc_d = {'a':[1,0,0,0],'c':[0,1,0,0],'g':[0,0,1,0],'t':[0,0,0,1], 'n':[0,0,0,0]}
     vectors=np.empty([len(df),seq_len,4])
@@ -17,7 +18,7 @@ def one_hot_encode(df, col='utr', seq_len=50):
         a = np.array([nuc_d[x] for x in seq])
         vectors[i] = a
     return vectors
-
+######################################################
 
 def meta_untransposed(ex_seq):
 

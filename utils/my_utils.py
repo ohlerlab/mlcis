@@ -1,8 +1,3 @@
-######################################################################################################
-#
-#                                         PART #1: MODEL
-#
-######################################################################################################
 
 import tensorflow as tf
 import pandas as pd
@@ -10,9 +5,6 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import scipy.stats as stats
-
-
-
 
 ######################################################################################################
 #
@@ -319,7 +311,7 @@ def barplot_mrl(data):
 ######################################################################################################
 
 def r2(x,y):
-    slope, intercept, r_value, p_value, std_err = stats.linregress(x,y)
+    r_value=stats.linregress(x,y)
     return r_value**2
 
 def corplot(df, obs_col='rl', pred_col='pred'):
