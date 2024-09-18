@@ -2,7 +2,7 @@
 
 # OS generated files #
 ######################
-.DS_Store*
+.DS_Store
 .DS_Store?
 
 ###### VS Code #######
@@ -34,3 +34,10 @@ git.pub
 mlcis-kipoi.yml
 mlcis_export.yml
 mlcis_export_v2.yml
+._.gitignore
+._.DS_Store
+._fig1_upstream_initiation.ipynb
+._fig2_AUG_exclusion.ipynb
+._fig2_model_improvement.ipynb
+._mlcis-kipoi.yml
+._mlcis_environment.yml
