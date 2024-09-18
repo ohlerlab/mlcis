@@ -43,3 +43,5 @@ mlcis_export_v2.yml
 ._mlcis_environment.yml
 /data/riboseq/mrl_riboseq_cor.ipynb
 /data/riboseq/5utrs.fa
+/data/GSM3130443_designed_library.csv.gz
+/data/GSM3130435_egfp_unmod_1.csv.gz
