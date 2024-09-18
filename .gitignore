@@ -26,10 +26,6 @@ model_utils.py*
 simulate_GC.ipynb*
 test.ipynb*
 data/meta/
-mlcis_export.yml
-mlcis_export_v2.yml
+/OptMRL/
+/extract_5utr/
 mlcis-kipoi.yml
-/mpra/
-git
-git.pub
-/data/cao-mpra/
