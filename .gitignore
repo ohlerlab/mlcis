@@ -1,0 +1,35 @@
+
+
+# OS generated files #
+######################
+.DS_Store*
+.DS_Store?
+
+###### VS Code #######
+######################
+.vscode/
+
+####### Python #######
+######################
+__pycache__/
+
+
+## Jupyter Notebook ##
+######################
+.ipynb_checkpoints/
+*/.ipynb_checkpoints/*
+
+
+## Project-Specific ##
+######################
+model_utils.py*
+simulate_GC.ipynb*
+test.ipynb*
+data/meta/
+mlcis_export.yml
+mlcis_export_v2.yml
+mlcis-kipoi.yml
+/mpra/
+git
+git.pub
+/data/cao-mpra/

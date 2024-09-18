@@ -1,18 +1,10 @@
-######################################################################################################
-#
-#                                         PART #1: MODEL
-#
-######################################################################################################
 
 import tensorflow as tf
 import pandas as pd
 import numpy as np
-import matplotlib as plt
+import matplotlib.pyplot as plt
 import seaborn as sns
-
-
-
-
+import scipy.stats as stats
 
 ######################################################################################################
 #
@@ -317,3 +309,20 @@ def barplot_mrl(data):
 
 
 ######################################################################################################
+
+def r2(x,y):
+    r_value=stats.linregress(x,y)
+    return r_value**2
+
+def corplot(df, obs_col='rl', pred_col='pred'):
+
+    print(r2(df['rl'], df['pred']))
+
+    g, ax = plt.subplots(figsize=(6,6))
+    g = sns.regplot(data = df, x = obs_col, y = pred_col, scatter_kws={'alpha':0.5}, line_kws={"color": "black"})
+    g.set(ylim=(0,9), xlim=(0,9), xticks = range(1,10,1), yticks = range(1,10,1))
+    plt.xticks(fontsize=15)
+    plt.yticks(fontsize=15)
+    plt.xlabel('Measured MRL', fontsize=20)
+    plt.ylabel('Predicted MRL', fontsize=20)
+    sns.despine()

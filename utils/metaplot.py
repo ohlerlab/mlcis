@@ -6,15 +6,9 @@ import seaborn as sns
 
 from sklearn.preprocessing import MinMaxScaler
 
-#ob = [('candy', 10, 300), ('apple', 20, 100), ('horse', 30, 200)]
-#print(sorted(ob, key= lambda x:x[1], reverse = False))
-# sorted function takes the second object in each element of the list to sort from
 
-#a = np.zeros((2,4))
-#b = np.arange(8).reshape((2,4))
-#c = np.add(a,b)
-
-
+##this function is adopted from Sample et al. (2019)##
+######################################################
 def one_hot_encode(df, col='utr', seq_len=50):
     nuc_d = {'a':[1,0,0,0],'c':[0,1,0,0],'g':[0,0,1,0],'t':[0,0,0,1], 'n':[0,0,0,0]}
     vectors=np.empty([len(df),seq_len,4])
@@ -24,7 +18,7 @@ def one_hot_encode(df, col='utr', seq_len=50):
         a = np.array([nuc_d[x] for x in seq])
         vectors[i] = a
     return vectors
-
+######################################################
 
 def meta_untransposed(ex_seq):
 
@@ -69,12 +63,14 @@ class Metaplot:
 
     def visualize(self, matrix, colorbar = False):
 
-        xlabel_list =   [-50, None, None, None, None, None, None, None, None, -40,
-                    None, None, None, None, None, None, None, None, None, -30,
-                    None, None, None, None, None, None, None, None, None, -20,
-                    None, None, None, None, None, None, None, None, None, -10,
-                    None, None, None, None, None, None, None, None, None, -1]
+        xlabel_list =   [-50, None, None, None, None, None, None, None, None, None, -40,
+                        None, None, None, None, None, None, None, None, None, -30,
+                        None, None, None, None, None, None, None, None, None, -20,
+                        None, None, None, None, None, None, None, None, None, -10,
+                        None, None, None, None, None, None, None, None, -1]
 
         ax = plt.subplots(figsize = (20,10))
-        ax = sns.heatmap(data = matrix, linewidths=.1, cmap = 'coolwarm', center = 0, yticklabels = ['A', 'C', 'G', 'U'], xticklabels = xlabel_list, cbar = colorbar, cbar_kws = {'shrink': .13, 'pad':0.02}, square = True)
+        ax = sns.heatmap(data = matrix, linewidths=.1, cmap = 'coolwarm', center = 0, yticklabels = ['A', 'C', 'G', 'U'], 
+                        xticklabels = xlabel_list, cbar = colorbar, cbar_kws = {'shrink': .13, 'pad':0.02}, square = True)
+        plt.xlabel('Nucleotide Distance to TIS', fontsize=15)              
         plt.show(ax)
