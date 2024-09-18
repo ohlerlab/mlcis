@@ -26,3 +26,6 @@ model_utils.py*
 simulate_GC.ipynb*
 test.ipynb*
 data/meta/
+/OptMRL/
+/extract_5utr/
+mlcis-kipoi.yml
