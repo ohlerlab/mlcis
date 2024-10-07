@@ -1,47 +1,30 @@
 
-
-# OS generated files #
-######################
-.DS_Store
+#OS-generated files#
+.DS_Store*
 .DS_Store?
 
-###### VS Code #######
-######################
+#macOS
+._*
+
+#VSCode#
 .vscode/
 
-####### Python #######
-######################
-__pycache__/
+#Git#
+.git
 
+#Python#
+**/__pycache__/
 
-## Jupyter Notebook ##
-######################
-.ipynb_checkpoints/
+#JupyterNotebooks#
+.ipynb_checkpoints
 */.ipynb_checkpoints/*
 
+#Specific#
+data/GSM3130435_egfp_unmod_1.csv.gz
+data/GSM3130443_designed_library.csv.gz
+data/mrl25to100/
+data/riboseq/riboseq_test.ipynb
 
-## Project-Specific ##
-######################
-model_utils.py*
-simulate_GC.ipynb*
-test.ipynb*
-data/meta/
-/OptMRL/
-/extract_5utr/
-mlcis-kipoi.yml
-git
-git.pub
-mlcis-kipoi.yml
-mlcis_export.yml
-mlcis_export_v2.yml
-._.gitignore
-._.DS_Store
-._fig1_upstream_initiation.ipynb
-._fig2_AUG_exclusion.ipynb
-._fig2_model_improvement.ipynb
-._mlcis-kipoi.yml
-._mlcis_environment.yml
-/data/riboseq/mrl_riboseq_cor.ipynb
-/data/riboseq/5utrs.fa
-/data/GSM3130443_designed_library.csv.gz
-/data/GSM3130435_egfp_unmod_1.csv.gz
+
+
+

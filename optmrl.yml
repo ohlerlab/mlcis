@@ -1,9 +1,7 @@
-name: mlcis
+name: optmrl
 channels:
-  - anaconda
-  - pytorch
   - conda-forge
-  - defaults
+  - bioconda
 dependencies:
   - abseil-cpp=20210324.2
   - absl-py=1.0.0
@@ -194,4 +192,3 @@ dependencies:
     - tqdm==4.62.3
     - typing-extensions==4.3.0
     - varname==0.8.2
-prefix: /Users/frederickkorbel/anaconda3/envs/mlcis
