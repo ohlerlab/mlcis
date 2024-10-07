@@ -2,9 +2,11 @@
 #OS-generated files#
 .DS_Store*
 .DS_Store?
+**/DS_Store
 
 #macOS
 ._*
+**/._*
 
 #VSCode#
 .vscode/
